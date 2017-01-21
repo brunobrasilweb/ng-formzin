@@ -1,0 +1,31 @@
+{
+    "name": "ng-forzin",
+    "version": "0.1.0",
+    "homepage": "https://github.com/brunobrasilweb/ng-formzin",
+    "authors": [
+        "Bruno Brasil <brunobrasilweb@gmail.com>"
+    ],
+    "main": "src/app.js",
+    "description": "Plugin para AngularJs",
+    "moduleType": [
+        "globals",
+        "node",
+        "yui"
+    ],
+    "keywords": [
+        "angular",
+        "mask",
+        "filter"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "angular": "~1.3.15"
+    }
+}
