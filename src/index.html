@@ -1,22 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="demo">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NG-Forzin</title>
+    <title>ng-formzin</title>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/dist/assets/css/main.css" />
     <script src="/plugins/angular/angular.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="app.js"></script>
+    <script src="/ng-formzin.angular.js"></script>
+    <script src="/app.js"></script>
 </head>
 
-<body ng-app="ng-forzin">
-    <div class="container">
-        Olá Forzin!
-    </div>
+<body ng-controller="demoController">
+    <!-- Header -->
+    <section id="header">
+        <div class="inner">
+            <h1><strong>Formzin para AngularJs</strong></h1>
+            <p>Mascaras, filtros, validações e manipulações de formulários.</p>
+            <ul class="actions">
+                <li><a href="#one" class="button scrolly">Exemplo</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- One -->
+    <section id="one" class="main style1">
+        <div class="container">
+            <div class="col-md-12">
+                <h2>Como usar</h2>
+                <p>Para utilizar basta chamar o arquivo:</p>
+            </div>
+            <div class="col-md-12">
+                <h2>Mascaras</h2>
+                <form name="formMascaras">
+                    <div class="form-group">
+                        <label for="mascaraCpf">CPF</label>
+                        <input type="text" class="form-control" id="mascaraCpf"
+                            ng-model="mascaraCpf"
+                            ng-formzin
+                            mask="cpf"
+                            validade="true" />
+                         Resultado: {{mascaraCpf}}   
+                    </div>    
+                    <div class="form-group">
+                        <label for="mascaraCnpj">CNPJ</label>
+                        <input type="text" class="form-control" id="mascaraCnpj"
+                            ng-model="mascaraCnpj"
+                            mask="cnpj"
+                            validade="true" />
+                         Resultado: {{mascaraCnpj}}   
+                    </div>    
+                    <div class="form-group">
+                        <label for="mascaraDataPtbr">Data (PT-BR)</label>
+                        <input type="text" class="form-control" id="mascaraDataPtbr"
+                            ng-model="mascaraDataPtbr"
+                            mask="data"
+                            validade="true" />
+                         Resultado: {{mascaraDataPtbr}}   
+                    </div>    
+                    <div class="form-group">
+                        <label for="mascaraDataEn">Data (com Formato YYYY/MM/DD)</label>
+                        <input type="text" class="form-control" id="mascaraDataEn"
+                            ng-model="mascaraDataEn"
+                            mask="data"
+                            format="YYYY/MM/DD"
+                            validade="true" />
+                         Resultado: {{mascaraDataEn}}   
+                    </div>
+                    <div class="form-group">
+                        <label for="mascaraCep">CEP</label>
+                        <input type="text" class="form-control" id="mascaraCep"
+                            ng-model="mascaraCep"
+                            mask="cep"
+                            validade="true" />
+                         Resultado: {{mascaraCep}}   
+                    </div>    
+                    <div class="form-group">
+                        <label for="mascaraCustom">Customizada</label>
+                        <input type="text" class="form-control" id="mascaraCustom"
+                            ng-model="mascaraCustom"
+                            mask="999/999"
+                            validade="true" />
+                         Resultado: {{mascaraCustom}}   
+                    </div>    
+                </form>    
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="/dist/assets/js/jquery.min.js"></script>
+    <script src="/dist/assets/js/jquery.scrolly.min.js"></script>
+    <script src="/dist/assets/js/skel.min.js"></script>
+    <script src="/dist/assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/dist/assets/js/main.js"></script>
 </body>
 
 </html>

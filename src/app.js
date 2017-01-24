@@ -1,4 +1,4 @@
-(function () {
-    'use strict';
-    angular.module('ng-forzin', []);
-})();
+angular.module('demo', ['ngFormzin']);
+angular.module("demo").controller("demoController", function ($scope) {
+    
+});
