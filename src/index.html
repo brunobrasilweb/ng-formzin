@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="demo">
+<html lang="en" ng-app="ngFormzin">
 
 <head>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
     <script src="/app.js"></script>
 </head>
 
-<body ng-controller="demoController">
+<body ng-controller="DemoController">
     <!-- Header -->
     <section id="header">
         <div class="inner">
@@ -43,7 +43,7 @@
                             ng-model="mascaraCpf"
                             ng-formzin
                             mask="cpf"
-                            validade="true" />
+                            required />
                          Resultado: {{mascaraCpf}}   
                     </div>    
                     <div class="form-group">
