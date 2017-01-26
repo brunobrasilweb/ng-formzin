@@ -35,58 +35,50 @@
                 <p>Para utilizar basta chamar o arquivo:</p>
             </div>
             <div class="col-md-12">
-                <h2>Mascaras</h2>
+                <h2>Campos</h2>
                 <form name="formMascaras">
-                    <div class="form-group">
+                    <div class="form-group" ng-class="{ 'has-error' : formMascaras.mascaraCpf.$invalid && !formMascaras.mascaraCpf.$pristine }">
                         <label for="mascaraCpf">CPF</label>
-                        <input type="text" class="form-control" id="mascaraCpf"
+                        <input type="text" class="form-control" name="mascaraCpf"
                             ng-model="mascaraCpf"
                             ng-formzin
+                            validate="cpf"
                             mask="cpf"
                             required />
-                         Resultado: {{mascaraCpf}}   
+                         <b>Resultado:</b> {{mascaraCpf}}<br>
+                         <b>Invalid:</b> {{formMascaras.mascaraCpf.$invalid}}<br>
                     </div>    
-                    <div class="form-group">
+                    <div class="form-group" ng-class="{ 'has-error' : formMascaras.mascaraCnpj.$invalid && !formMascaras.mascaraCnpj.$pristine }">
                         <label for="mascaraCnpj">CNPJ</label>
-                        <input type="text" class="form-control" id="mascaraCnpj"
+                        <input type="text" class="form-control" name="mascaraCnpj"
                             ng-model="mascaraCnpj"
+                            ng-formzin
                             mask="cnpj"
-                            validade="true" />
-                         Resultado: {{mascaraCnpj}}   
+                            validate="cnpj"
+                            required />
+                         <b>Resultado:</b> {{mascaraCnpj}}<br>
+                         <b>Invalid:</b> {{formMascaras.mascaraCnpj.$invalid}}<br>
                     </div>    
-                    <div class="form-group">
+                    <div class="form-group" ng-class="{ 'has-error' : formMascaras.mascaraDataPtbr.$invalid && !formMascaras.mascaraDataPtbr.$pristine }">
                         <label for="mascaraDataPtbr">Data (PT-BR)</label>
-                        <input type="text" class="form-control" id="mascaraDataPtbr"
+                        <input type="text" class="form-control" name="mascaraDataPtbr"
                             ng-model="mascaraDataPtbr"
-                            mask="data"
-                            validade="true" />
-                         Resultado: {{mascaraDataPtbr}}   
+                            ng-formzin
+                            mask="date"
+                            validade="date" />
+                         <b>Resultado:</b> {{mascaraDataPtbr}}<br>
+                         <b>Invalid:</b> {{formMascaras.mascaraDataPtbr.$invalid}}<br>
                     </div>    
-                    <div class="form-group">
-                        <label for="mascaraDataEn">Data (com Formato YYYY/MM/DD)</label>
-                        <input type="text" class="form-control" id="mascaraDataEn"
+                    <div class="form-group" ng-class="{ 'has-error' : formMascaras.mascaraDataEn.$invalid && !formMascaras.mascaraDataEn.$pristine }">
+                        <label for="mascaraDataEn">Data (EN)</label>
+                        <input type="text" class="form-control" name="mascaraDataEn"
                             ng-model="mascaraDataEn"
-                            mask="data"
-                            format="YYYY/MM/DD"
-                            validade="true" />
-                         Resultado: {{mascaraDataEn}}   
-                    </div>
-                    <div class="form-group">
-                        <label for="mascaraCep">CEP</label>
-                        <input type="text" class="form-control" id="mascaraCep"
-                            ng-model="mascaraCep"
-                            mask="cep"
-                            validade="true" />
-                         Resultado: {{mascaraCep}}   
-                    </div>    
-                    <div class="form-group">
-                        <label for="mascaraCustom">Customizada</label>
-                        <input type="text" class="form-control" id="mascaraCustom"
-                            ng-model="mascaraCustom"
-                            mask="999/999"
-                            validade="true" />
-                         Resultado: {{mascaraCustom}}   
-                    </div>    
+                            ng-formzin
+                            mask="dateEn"
+                            validade="date" />
+                         <b>Resultado:</b> {{mascaraDataEn}}<br>
+                         <b>Invalid:</b> {{formMascaras.mascaraDataEn.$invalid}}<br>
+                    </div>  
                 </form>    
             </div>
         </div>
